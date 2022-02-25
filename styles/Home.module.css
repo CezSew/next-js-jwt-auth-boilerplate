@@ -119,3 +119,9 @@
     flex-direction: column;
   }
 }
+
+.link {
+  color: #0070f3;
+  font-weight: bold;
+  text-decoration: underline;
+}

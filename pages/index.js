@@ -3,10 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
-  const handleSubmit = e => {
-    
-  };
-
+  
   return (
     <div className={styles.container}>
       <Head>
@@ -16,27 +13,14 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="#">Doceo!</a>
-        </h1>
-
-        <div>
-          <h2>Log in:</h2>
-          <form onSubmit={handleSubmit}>
-            <div>
-              <label htmlFor='input-name'>
-                Name:
-              </label>
-              <input type={'text'} placeholder={`Login`} name={`login`} id={`input-name`}/>
-            </div>
-            <div>
-              <label htmlFor='input-password'>
-                Password:
-              </label>
-              <input type={'password'} placeholder={`Password`} name={`password`} id={`input-password`}/>
-            </div>
-          </form>
-        </div>
+        <p>
+          {`Hello there, maybe `}
+          <a className={styles.link} href="/login">{`login?`}</a>
+        </p>
+        <p>
+          {`Or create an account here `}
+          <a className={styles.link} href="/register">{`register.`}</a>
+        </p>
       </main>
 
       <footer className={styles.footer}>

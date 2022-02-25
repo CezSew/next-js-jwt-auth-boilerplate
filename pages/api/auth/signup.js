@@ -7,9 +7,17 @@ async function handler(req, res) {
     return;
   }
 
-  const data = req.body;
+  const data = JSON.parse(req.body);
 
-  const { email, password } = data;
+  const { email, password, nickname } = data;
+
+  if (!nickname) {
+    res.status(422).json({
+      message:
+        'Invalid input - no nickname specified.',
+    });
+    return;
+  }
 
   if (
     !email ||
@@ -18,7 +26,7 @@ async function handler(req, res) {
     password.trim().length < 7
   ) {
     res.status(422).json({
-      message:
+      error:
         'Invalid input - password should also be at least 7 characters long.',
     });
     return;
@@ -31,7 +39,7 @@ async function handler(req, res) {
   const existingUser = await db.collection('users').findOne({ email: email });
 
   if (existingUser) {
-    res.status(422).json({ message: 'User exists already!' });
+    res.status(422).json({ error: 'User exists already!' });
     client.close();
     return;
   }
@@ -41,6 +49,7 @@ async function handler(req, res) {
   const result = await db.collection('users').insertOne({
     email: email,
     password: hashedPassword,
+    nickname: nickname
   });
 
   res.status(201).json({ message: 'Created user!' });
