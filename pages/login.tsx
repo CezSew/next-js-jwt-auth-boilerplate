@@ -1,5 +1,6 @@
-import react, { useState } from "react";
+import { useState } from "react";
 import { signIn } from 'next-auth/react';
+import router from "next/router";
 
 const LoginPage = () => {
     const [isLoading, setIsLoading] = useState(false);
@@ -9,7 +10,6 @@ const LoginPage = () => {
       setIsLoading(true);
       
       const data = Object.fromEntries(new FormData(e.target).entries());
-  
       const result = await signIn('credentials', {
         redirect: false,
         ...data
@@ -17,17 +17,16 @@ const LoginPage = () => {
   
       setIsLoading(false);
   
-      console.log(result)
       if (!result.error) {
-        console.log('hello there')
-        // set some auth state
-        // router.replace('/profile');
+        router.replace('/profile');
+      } else {
+          alert(result.error)
       }
     };
   
-    if (isLoading) {
-      return <p>Loading...</p>;
-    }
+    // if (isLoading) {
+    // //   return <p>Loading...</p>;
+    // }
 
 
     return (
