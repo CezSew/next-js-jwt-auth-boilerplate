@@ -30,6 +30,5 @@ export async function getServerSideProps(context) {
       props: { session },
     };
   }
-  
 
 export default ProfilePage;

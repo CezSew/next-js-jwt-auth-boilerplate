@@ -21,6 +21,10 @@ export default function Home() {
           {`Or create an account here `}
           <a className={styles.link} href="/register">{`register.`}</a>
         </p>
+        <p>
+          {`View added `}
+          <a className={styles.link} href="/tests">{`tests.`}</a>
+        </p>
       </main>
 
       <footer className={styles.footer}>
