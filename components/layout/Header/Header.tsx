@@ -1,4 +1,4 @@
-import styles from './Header.module.css';
+import styles from './Header.module.scss';
 import { getSession, signOut, useSession } from 'next-auth/react';
 import Link from 'next/link'
 
