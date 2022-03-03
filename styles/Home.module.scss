@@ -1,0 +1,14 @@
+@import '../styles/colors.scss';
+
+.home__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+    font-size: 2rem;
+}
+
+.link {
+    color: $blue;
+    font-weight: bold;
+}

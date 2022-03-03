@@ -1,18 +1,14 @@
-import React, { useEffect } from "react";
+import React from 'react';
 import { getSession } from 'next-auth/react';
 
-const ProfilePage = props => {
-    useEffect(() => {
-        console.log(props)
-    }, []);
-
-    return (
-        <>
-            <h1>Profile</h1>
-            
-        </>
-    )
-}
+const ProfilePage = () => (
+    <>
+        <h1>{`Profile page`}</h1>
+        <p>
+            {`Only for logged in users`}
+        </p>
+    </>
+)
 
 export async function getServerSideProps(context) {
     const session = await getSession({ req: context.req });
@@ -29,6 +25,6 @@ export async function getServerSideProps(context) {
     return {
       props: { session },
     };
-  }
+}
 
 export default ProfilePage;

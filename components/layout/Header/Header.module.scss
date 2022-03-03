@@ -20,9 +20,11 @@
 }
 
 .nav__logOut {
-    border: .1rem solid $orange;
+    background: $blue;
+    color: $white;
+    border: .1rem solid $blue;
     box-shadow: none;
-    background: none;
+    
     padding: .25rem .5rem;
     cursor: pointer;
     font-weight: bold;
@@ -30,6 +32,6 @@
 }
 
 .nav__logOut:hover {
-    background: $orange;
-    color: $white;
+    background: none;
+    color: $black;
 }

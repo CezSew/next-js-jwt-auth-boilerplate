@@ -27,8 +27,6 @@ const RegisterPage = () => {
             if (data.error) {
                 alert(data.error);
             }
-
-            console.log(data);
         })
     }
 
