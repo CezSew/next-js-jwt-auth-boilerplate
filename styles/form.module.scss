@@ -1,0 +1,37 @@
+@import './colors.scss';
+
+.form {
+    max-width: 20rem;
+}
+
+.line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.label {
+    margin-right: 1rem;
+    color: $black;
+}
+
+.input {
+    padding: .5rem .75rem;
+    border: 1px solid $gray;
+}
+
+.submit {
+    display: block;
+    padding: .5rem .75rem;
+    border: 1px solid $gray;
+    background-color: $orange;
+    color: $white;
+    border: 0;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.submit:hover {
+    background-color: $blue;
+}

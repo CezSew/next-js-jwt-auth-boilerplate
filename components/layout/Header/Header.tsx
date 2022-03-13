@@ -29,12 +29,12 @@ const Header = () => {
                     <>
                         <li className={styles.nav__listItem}>
                             <Link href="/login">
-                                <a>Sign in</a>
+                                <a>Log in</a>
                             </Link>
                         </li>
                         <li className={styles.nav__listItem}>
                             <Link href="/register">
-                                <a>Sign up</a>
+                                <a>Register</a>
                             </Link>
                         </li>
                     </>

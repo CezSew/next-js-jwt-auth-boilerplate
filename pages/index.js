@@ -4,11 +4,11 @@ const Home = () => (
   <div className={styles.home__container}>
     <section className={styles.home__main}>
       <p>
-        {`Hello there, maybe `}
-        <a className={styles.link} href="/login">{`login?`}</a>
+        {`If you have an account- `}
+        <a className={styles.link} href="/login">{`login.`}</a>
       </p>
       <p>
-        {`Or create an account here- `}
+        {`If not, please `}
         <a className={styles.link} href="/register">{`register.`}</a>
       </p>
     </section>
