@@ -1,15 +1,20 @@
 import styles from '../styles/Home.module.scss';
+import Link from 'next/link';
 
 const Home = () => (
   <div className={styles.home__container}>
     <section className={styles.home__main}>
       <p>
         {`If you have an account- `}
-        <a className={styles.link} href="/login">{`login.`}</a>
+        <Link href="/login" passHref>
+            <a className={styles.link}>login.</a>
+        </Link>
       </p>
       <p>
         {`If not, please `}
-        <a className={styles.link} href="/register">{`register.`}</a>
+        <Link href="/register" passHref>
+            <a className={styles.link}>register.</a>
+        </Link>
       </p>
     </section>
   </div>

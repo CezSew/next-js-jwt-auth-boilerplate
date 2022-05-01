@@ -60,7 +60,7 @@ const LoginPage = () => {
                         id={INPUT_PASSWORD_ID}
                     />
                 </div>
-                <input className={`${formStyles.submit}`} type={`submit`} value={`Wyślij`} />
+                <input className={`${formStyles.submit}`} type={`submit`} value={`Send`} />
             </form>
         </main>
         

@@ -2,12 +2,12 @@ import React from 'react';
 import { getSession } from 'next-auth/react';
 
 const ProfilePage = () => (
-    <>
-        <h1>{`Profile page`}</h1>
-        <p>
-            {`Only for logged in users`}
-        </p>
-    </>
+  <main className={`container`}>
+      <h1 className='heading'>{`Profile page`}</h1>
+      <p>
+          {`Only for logged in users`}
+      </p>
+  </main>
 )
 
 export async function getServerSideProps(context) {
